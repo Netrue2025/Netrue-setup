@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-200">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 w-full border-b border-primary/10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex h-20 items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="flex items-center justify-center size-10 rounded-lg bg-primary text-white">
+<span class="material-symbols-outlined">agriculture</span>
+</div>
+<span class="text-xl font-bold tracking-tight text-slate-900 dark:text-slate-100">Netrue <span class="text-primary">Agri-Tech</span></span>
+</div>
+<nav class="hidden md:flex items-center gap-8"> 
+<a class="text-sm font-medium hover:text-primary transition-colors" href="/">Home</a>
+<a class="text-sm font-medium text-primary underline underline-offset-4" href="/About-us/">About us</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="/Solutions/">Solutions</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="/education.html">Academy</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="/Shop/">Shop</a>
+</nav>
+<div class="flex items-center gap-4">
+    <a href="/Contact-us/">
+        <button class="hidden sm:flex items-center justify-center rounded-xl bg-primary px-6 py-2.5 text-sm font-bold text-white hover:bg-primary/90 transition-all">
+            Contact Us
+        </button>
+    </a>
+
+<div class="size-10 rounded-full border-2 border-primary/20 bg-cover bg-center" data-alt="User profile placeholder" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD2bCGKHldiIlfpgkqQFlwTs7mEVdI3jBX3Y6QVyP2MRw9j6AkFjKoPYxbN2K3vZJTqsLkx8rEai47QmBw8N8zxpt861Rs_LJ733UIxVMvcuR_J_jtMrE8t0Oj8-cIkurExIhJCx2ERxft9C0IEXfepEWEg-IDlH6DOAlccqsQREOND81sXbuVnLc7DXTAB66PrHMMseIscR6X8ZDuRFHi6KE9b51xIQDc1WE80rsLH3qVkGj1GDm0F2zNipLYcbexhcuLH-KgIAxA')"></div>
+</div>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative py-20 lg:py-32 overflow-hidden">
+<div class="absolute inset-0 bg-primary/5 dark:bg-primary/10 -z-10"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col items-center text-center max-w-4xl mx-auto">
+<span class="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-bold tracking-wider uppercase mb-6">Innovation in Agriculture</span>
+<h1 class="text-4xl md:text-6xl font-black tracking-tight text-slate-900 dark:text-slate-100 mb-8 leading-[1.1]">
+                        Transforming Agriculture Through <span class="text-primary">Advanced Technology</span>
+</h1>
+<p class="text-lg md:text-xl text-slate-600 dark:text-slate-400 leading-relaxed mb-10">
+                        From data-driven insights to autonomous systems, we are redefining how the world produces food by merging deep tech expertise with sustainable farming practices.
+                    </p>
+<div class="flex flex-wrap justify-center gap-4">
+<button class="bg-primary text-white px-8 py-4 rounded-xl font-bold text-lg hover:shadow-lg hover:shadow-primary/20 transition-all">Explore Solutions</button>
+<button class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-8 py-4 rounded-xl font-bold text-lg hover:bg-slate-50 dark:hover:bg-slate-700 transition-all">Watch Our Story</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Our Story -->
+<section class="py-24 bg-white dark:bg-slate-900/50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid lg:grid-cols-2 gap-16 items-center">
+<div class="relative">
+<div class="aspect-video rounded-3xl overflow-hidden shadow-2xl">
+<img alt="Sustainable farming and technology integration" class="w-full h-full object-cover" data-alt="Aerial view of green tech-enabled farmland" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4KVKnr4bZe28TcQT8jZ7Ox7QTuRILclcRfiFnvd5dZIuasxNLonnnwqi9IlaJJ9EFACcKw7iFDHZczWKZE1vt9p6OWhKpkDrS06cs5PLwt3ijZ1dP2rXlKg8t64swkebYYItSqAf4RkQYOksF7jnKHjwjIxLLkOBI77p3iyLZ4fTTKaWLfJOt22OTl61Pmez6NrcXyBEjbh4x9ev61Z-K2khH84Bm3jPuEs1lR0ZyFEod46YXWlPa48mcwT9FFKSs3Hp9hcRdLNc"/>
+</div>
+<div class="absolute -bottom-6 -right-6 bg-primary p-8 rounded-2xl text-white hidden md:block">
+<span class="block text-4xl font-black leading-none">10+</span>
+<span class="text-sm font-medium opacity-90 uppercase tracking-widest">Years of Tech Excellence</span>
+</div>
+</div>
+<div class="flex flex-col gap-6">
+<h2 class="text-3xl font-bold text-slate-900 dark:text-slate-100">Our Story</h2>
+<div class="space-y-4 text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
+<p>
+                                Originally founded as <span class="font-bold text-slate-900 dark:text-slate-100">Netrue Limited</span>, we began as a versatile software engineering firm building enterprise solutions for global brands. However, our founders witnessed a critical gap between high-end technology and the agricultural sector—the backbone of our civilization.
+                            </p>
+<p>
+                                Recognizing that food security and sustainability are the most pressing challenges of our time, we pivoted. We rebranded as <span class="font-bold text-primary">Netrue Agri-Tech</span>, channeling our deep expertise in AI, IoT, and Software Engineering toward creating a more efficient, tech-enabled farming future.
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Mission & Vision -->
+<section class="py-24">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid md:grid-cols-3 gap-8">
+<div class="p-8 rounded-2xl bg-primary/5 dark:bg-primary/10 border border-primary/10">
+<div class="size-12 rounded-xl bg-primary text-white flex items-center justify-center mb-6">
+<span class="material-symbols-outlined">target</span>
+</div>
+<h3 class="text-xl font-bold mb-4">Precision</h3>
+<p class="text-slate-600 dark:text-slate-400">Harnessing granular data and IoT sensors for exact resource management, ensuring every drop of water and gram of fertilizer is optimized.</p>
+</div>
+<div class="p-8 rounded-2xl bg-primary/5 dark:bg-primary/10 border border-primary/10">
+<div class="size-12 rounded-xl bg-primary text-white flex items-center justify-center mb-6">
+<span class="material-symbols-outlined">eco</span>
+</div>
+<h3 class="text-xl font-bold mb-4">Sustainability</h3>
+<p class="text-slate-600 dark:text-slate-400">Building circular systems that protect our planet's future while increasing yields, proving that ecology and economy can thrive together.</p>
+</div>
+<div class="p-8 rounded-2xl bg-primary/5 dark:bg-primary/10 border border-primary/10">
+<div class="size-12 rounded-xl bg-primary text-white flex items-center justify-center mb-6">
+<span class="material-symbols-outlined">groups</span>
+</div>
+<h3 class="text-xl font-bold mb-4">Empowerment</h3>
+<p class="text-slate-600 dark:text-slate-400">Providing the tools, training, and digital infrastructure that enable modern farmers to thrive in a digital-first global market.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Our Expertise -->
+<section class="py-24 bg-slate-900 text-white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold mb-4">Our Core Pillars</h2>
+<p class="text-slate-400 max-w-2xl mx-auto">Leveraging our heritage in software to revolutionize the fields.</p>
+</div>
+<div class="grid grid-cols-2 lg:grid-cols-5 gap-8">
+<div class="flex flex-col items-center text-center">
+<div class="size-16 rounded-full bg-white/10 flex items-center justify-center mb-4 text-primary">
+<span class="material-symbols-outlined text-3xl">terminal</span>
+</div>
+<h4 class="font-bold">Software Dev</h4>
+</div>
+<div class="flex flex-col items-center text-center">
+<div class="size-16 rounded-full bg-white/10 flex items-center justify-center mb-4 text-primary">
+<span class="material-symbols-outlined text-3xl">sensors</span>
+</div>
+<h4 class="font-bold">IoT Solutions</h4>
+</div>
+<div class="flex flex-col items-center text-center">
+<div class="size-16 rounded-full bg-white/10 flex items-center justify-center mb-4 text-primary">
+<span class="material-symbols-outlined text-3xl">psychology</span>
+</div>
+<h4 class="font-bold">AI Engineering</h4>
+</div>
+<div class="flex flex-col items-center text-center">
+<div class="size-16 rounded-full bg-white/10 flex items-center justify-center mb-4 text-primary">
+<span class="material-symbols-outlined text-3xl">school</span>
+</div>
+<h4 class="font-bold">Training</h4>
+</div>
+<div class="flex flex-col items-center text-center">
+<div class="size-16 rounded-full bg-white/10 flex items-center justify-center mb-4 text-primary">
+<span class="material-symbols-outlined text-3xl">shopping_cart</span>
+</div>
+<h4 class="font-bold">Digital Shop</h4>
+</div>
+</div>
+</div>
+</section>
+<!-- Our Impact & Academy -->
+<section class="py-24">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="bg-background-light dark:bg-background-dark border border-primary/20 rounded-3xl p-8 lg:p-16 flex flex-col lg:flex-row gap-12 items-center">
+<div class="flex-1 space-y-8">
+<div>
+<span class="text-primary font-bold text-sm tracking-widest uppercase">Real-World Impact</span>
+<h2 class="text-4xl font-black mt-2">Netrue Academy</h2>
+</div>
+<p class="text-lg text-slate-600 dark:text-slate-400">
+                            Our commitment goes beyond selling hardware. Through the <span class="font-bold">Netrue Academy</span>, we have trained over 5,000 farmers in smart irrigation techniques, data management, and automated monitoring.
+                        </p>
+<div class="flex items-start gap-4 p-6 bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700">
+<span class="material-symbols-outlined text-primary text-4xl">water_drop</span>
+<div>
+<h4 class="font-bold text-lg">Case Study: Automated Irrigation</h4>
+<p class="text-sm text-slate-500 mt-1">Our flagship IoT irrigation project reduced water waste by 40% while increasing crop yield by 25% for local cooperatives.</p>
+</div>
+</div>
+</div>
+<div class="flex-1 w-full">
+<div class="grid grid-cols-2 gap-4">
+<div class="aspect-square rounded-2xl overflow-hidden">
+<img alt="Student learning agritech" class="w-full h-full object-cover" data-alt="Student operating a digital agricultural interface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoLsyEZMzb3REwh5nKC4kYU22bWnHB_t8vHqfqd7nBVSuT_Zj5biwrXEGbRADgAsuA2vrXECTbYQC1cKYLNl8H8YwIyzHjuRHgbtOT1mZNSIUl4GjmKb1fLi9CrRw5ME-RyKk3N_8fOZRTEcah2qqnd11WBFURIP6t8Z1z_BZqbiqHNR4TX05OZ2EvtasNvj1xd5xEvKs6WA3FOZpoApVqjKijOLMKZEs_sgMoBRMjc8uFB4gDLzIDUvzgPHKfOw161L-KlGV0v5s"/>
+</div>
+<div class="aspect-square rounded-2xl overflow-hidden mt-8">
+<img alt="Irrigation system automation" class="w-full h-full object-cover" data-alt="Smart irrigation pipes in a farm field" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOm228WwWHcp3GanaNO0TvIIvQhCtbW_HFoh1603rnOLAGkiOksR0vAeDgsc4hN077DtqzIq44N7NheTiA-VIWDPLjGiYNTcacUOddbmpmtYV1JvZ_t_fesL8RjVkm-SpdO-ZRkLBvLrBkhiIx_-nfA03neObpPEFCCOcv9xFI159cAMi_qg4CqtLaL-bA4eh3YjD7gCZVzsBAVHfr7sdg1nr05n5Hom3zxAb_d2g4MUU3vy1S6FMFe1YUEatSTFKZ_qi16-HFLtQ"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Team Section -->
+<section class="py-24 bg-white dark:bg-slate-900/50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<h2 class="text-3xl font-bold mb-16">The Minds Behind Netrue</h2>
+<div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-12">
+<div class="group">
+<div class="size-48 mx-auto rounded-2xl bg-slate-200 dark:bg-slate-800 mb-6 overflow-hidden border-2 border-transparent group-hover:border-primary transition-all">
+<img alt="CEO Portrait" class="w-full h-full object-cover" data-alt="Portrait of a professional business man" src="/Media/Images/ceo.jpeg"/>
+</div>
+<h4 class="font-bold text-lg">J.J Alaba</h4>
+<p class="text-primary text-sm font-medium">Founder &amp; CEO</p>
+</div>
+<div class="group">
+<div class="size-48 mx-auto rounded-2xl bg-slate-200 dark:bg-slate-800 mb-6 overflow-hidden border-2 border-transparent group-hover:border-primary transition-all">
+<img alt="CTO Portrait" class="w-full h-full object-cover" data-alt="Portrait of a woman tech expert" src="/Media/Images/socialMediaManager.jpeg"/>
+</div>
+<h4 class="font-bold text-lg">Alexander.O Olabode</h4>
+<p class="text-primary text-sm font-medium">Social Media Manager</p>
+</div>
+<div class="group">
+<div class="size-48 mx-auto rounded-2xl bg-slate-200 dark:bg-slate-800 mb-6 overflow-hidden border-2 border-transparent group-hover:border-primary transition-all">
+<img alt="Agronomist Portrait" class="w-full h-full object-cover" data-alt="Portrait of a man in agriculture uniform" src="/Media/Images/softwareEngineer.jpeg"/>
+</div>
+<h4 class="font-bold text-lg">Abeeb.A Olajide</h4>
+<p class="text-primary text-sm font-medium">Head of Agricultural Software Engineer</p>
+</div>
+<div class="group">
+<div class="size-48 mx-auto rounded-2xl bg-slate-200 dark:bg-slate-800 mb-6 overflow-hidden border-2 border-transparent group-hover:border-primary transition-all">
+<img alt="Operations Portrait" class="w-full h-full object-cover" data-alt="Portrait of a professional woman manager" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4hNeB1TiZ22Shq3KlupOKGL82a-pvehTg5zDtIY2FuLyGQzxobVnoRdvQ76u_4_EcoJuecGELMykLPipoS2r1WNgNZvqIm4pnKHagQdKJdWigmiUW2Raqxg4R0yJ43T3ApIRXfjt2h2DAts1XLVnBJuF7L4QzMr9-zAWhVUH95NEFosy6sz9zAayERmOPsvCqstsS3U2VQFchBkJl1iwiVp7AUAh1p0Y_0RMFVyJBe3O928lRXXyofXfeImVk86mDqZ_Kq4s89MY"/>
+</div>
+<h4 class="font-bold text-lg">Elena Rodriguez</h4>
+<p class="text-primary text-sm font-medium">Operations Director</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24">
+<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="bg-primary rounded-[2rem] p-12 text-center text-white relative overflow-hidden">
+<div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 size-96 bg-white/10 rounded-full blur-3xl"></div>
+<div class="relative z-10">
+<h2 class="text-4xl font-black mb-6">Ready to Join Our Journey?</h2>
+<p class="text-lg opacity-90 mb-10 max-w-2xl mx-auto">Whether you're a farmer looking to modernize or a tech partner wanting to collaborate, we want to hear from you.</p>
+    <a href="/Contact-us/">
+        <button class="bg-white text-primary px-10 py-4 rounded-xl font-bold text-lg hover:bg-opacity-90 transition-all">
+            Get in Touch Today
+        </button>
+    </a>
+
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-900 text-slate-400 py-16 border-t border-white/5">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid md:grid-cols-4 gap-12 mb-12">
+<div class="col-span-2">
+<div class="flex items-center gap-3 text-white mb-6">
+<div class="size-8 rounded bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-sm">agriculture</span>
+</div>
+<span class="text-xl font-bold">Netrue Agri-Tech</span>
+</div>
+<p class="max-w-sm mb-6">Driving the next evolution of sustainable agriculture through deep tech and human-centric innovation.</p>
+<div class="flex gap-4">
+<a class="size-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#"><span class="material-symbols-outlined text-lg">public</span></a>
+<a class="size-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#"><span class="material-symbols-outlined text-lg">mail</span></a>
+</div>
+</div>
+<div>
+<h5 class="text-white font-bold mb-6">Company</h5>
+<ul class="space-y-4">
+<li><a class="hover:text-primary transition-colors" href="/About-us/">Our Story</a></li>
+<li><a class="hover:text-primary transition-colors" href="/education.html">Netrue Academy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+<li><a class="hover:text-primary transition-colors" href="/Contact-us/">Contact</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-white font-bold mb-6">Solutions</h5>
+<ul class="space-y-4">
+<li><a class="hover:text-primary transition-colors" href="#">IoT Monitoring</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Precision AI</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Digital Shop</a></li>
+<li><a class="hover:text-primary transition-colors" href="/Shop/">Custom Software</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-12 border-t border-white/5 flex flex-col md:row items-center justify-between gap-4 text-sm">
+<p>© 2024 Netrue Agri-Tech. All rights reserved.</p>
+<div class="flex gap-8">
+<a class="hover:text-white transition-colors" href="/privacy-policy.html">Privacy Policy</a>
+<a class="hover:text-white transition-colors" href="/terms-of-service.html">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

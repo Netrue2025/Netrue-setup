@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+    <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Netrue Limited | Digital Agri-Tech Shop</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        colors: {
+                            "primary": "#ec5b13",
+                            "background-light": "#f8f6f6",
+                            "background-dark": "#221610",
+                        },
+                        fontFamily: {
+                            "display": ["Public Sans", "sans-serif"]
+                        },
+                        borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                    },
+                },
+            }
+        </script>
+    <style>
+            body {
+                font-family: 'Public Sans', sans-serif;
+            }
+        </style>
+    </head>
+    <body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-300">
+    <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden font-display">
+    <div class="layout-container flex h-full grow flex-col">
+    <!-- Navigation Bar -->
+    <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 px-6 md:px-10 py-4 bg-white dark:bg-slate-900/50 backdrop-blur-md sticky top-0 z-50">
+    <div class="flex items-center gap-8">
+    <div class="flex items-center gap-3 text-primary">
+    <div class="size-8 flex items-center justify-center bg-primary/10 rounded-lg">
+    <span class="material-symbols-outlined text-primary">agriculture</span>
+    </div>
+    <h2 class="text-slate-900 dark:text-white text-xl font-bold leading-tight tracking-tight">Netrue Limited</h2>
+    </div>
+    <nav class="hidden md:flex items-center gap-8">
+    <a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-semibold transition-colors" href="/">Home</a>
+    <a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-semibold transition-colors" href="/Shop/">Shop</a>
+    <a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-semibold transition-colors" href="#">Solution</a>
+    <a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-semibold transition-colors" href="#">Support</a>
+    </nav>
+    </div>
+    <div class="flex flex-1 justify-end gap-4 items-center">
+    <div class="hidden sm:flex items-center max-w-xs w-full">
+    <div class="relative w-full">
+    <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg">search</span>
+    <input class="w-full pl-10 pr-4 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-sm focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all" placeholder="Search agri-tech hardware..." type="text"/>
+    </div>
+    </div>
+    <div class="flex gap-2">
+    <button class="flex items-center justify-center rounded-xl p-2 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary transition-all relative">
+        <a href="/Shop/checkout.html"><span class="material-symbols-outlined">shopping_cart</span></a>
+    <span class="absolute -top-1 -right-1 bg-primary text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">3</span>
+    </button>
+    <button class="flex items-center justify-center rounded-xl p-2 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary transition-all" onclick="document.documentElement.classList.toggle('dark')">
+    <span class="material-symbols-outlined">dark_mode</span>
+    </button>
+    </div>
+    <div class="bg-primary/20 rounded-full p-0.5 border-2 border-primary/30">
+    <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-8" data-alt="User profile avatar of a farmer" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAPtnWS8nZC9sel6gK1DAtG-gCCIUBzscxjAwwPCSh5qHc5Z8zyHZZ9ruPYTKrpgrM8m52778sqwloD6vd2nBgmyP_rKcM3GIyeBH0MoOd9g9Sbn_DD-IxCmX91DspklurGWtljB2lFq377W991X75p8HW-PFTvtQM1OoiILhRQAB-jcDGoxZowOObUOvy6fuJsf-PPlCW14AlSJvPdesZObYJ21fpFD6KzDDYNvk8ZZaIbvCr7w2HhKWXyEkdRJf6RtVi375ip-U8");'></div>
+    </div>
+    </div>
+    </header>
+    <main class="max-w-7xl mx-auto w-full px-6 py-10">
+    <!-- Hero / Title Section -->
+    <div class="flex flex-col gap-4 mb-10">
+    <h1 class="text-slate-900 dark:text-white text-5xl font-extrabold tracking-tight">Digital Shop</h1>
+    <p class="text-slate-500 dark:text-slate-400 text-lg max-w-2xl">
+                        Equip your farm with cutting-edge IoT hardware and intelligent software solutions designed for the modern agricultural landscape.
+                    </p>
+    </div>
+    <!-- Categories / Filters -->
+    <div class="flex gap-3 mb-8 overflow-x-auto pb-2 scrollbar-hide">
+    <button class="flex items-center gap-2 rounded-xl bg-primary text-white px-5 py-2.5 text-sm font-bold shadow-lg shadow-primary/20 whitespace-nowrap">
+    <span class="material-symbols-outlined text-sm">grid_view</span> All Products
+                    </button>
+    <button class="flex items-center gap-2 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 px-5 py-2.5 text-sm font-semibold hover:border-primary transition-all whitespace-nowrap">
+    <span class="material-symbols-outlined text-sm">sensors</span> IoT Sensors
+                    </button>
+    <button class="flex items-center gap-2 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 px-5 py-2.5 text-sm font-semibold hover:border-primary transition-all whitespace-nowrap">
+    <span class="material-symbols-outlined text-sm">water_drop</span> Smart Irrigation
+                    </button>
+    <button class="flex items-center gap-2 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 px-5 py-2.5 text-sm font-semibold hover:border-primary transition-all whitespace-nowrap">
+    <span class="material-symbols-outlined text-sm">analytics</span> Digital Farming Tools
+                    </button>
+    <button class="flex items-center gap-2 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 px-5 py-2.5 text-sm font-semibold hover:border-primary transition-all whitespace-nowrap">
+    <span class="material-symbols-outlined text-sm">filter_alt</span> More Filters
+                    </button>
+    </div>
+    <!-- Product Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+    <!-- Product 1 -->
+    <div class="group flex flex-col bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-2xl hover:shadow-primary/5 transition-all">
+    <div class="relative aspect-square overflow-hidden bg-slate-100 dark:bg-slate-800">
+    <div class="absolute inset-0 bg-center bg-cover transition-transform duration-500 group-hover:scale-110" data-alt="High-tech soil moisture sensor probe" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCVSUdCh3ktRHEbIXPCthGaFmjAwwXuU_YQYKnZ_AfZJ6RIsYcvscVV-L5GkToC35qVny_Qz0uNyWtrOxuQID4B4ljOIynRBXzVP0ZU-2p_4ZCMIPPUWjPUxpThwRK3BWeasg50P-axgJginP_R6NZ4UvMaSnHoIR8pk5ATKcuU4_2osXyohRNCN9VJ01wt4Gl-SIyjU414gjy6A5NJ8NUuyadLKIxj1D24Xkk36obM-wHhf_3P3eFKHFPBiBUNe8KvimOiXMPQkfo");'></div>
+    <span class="absolute top-3 left-3 bg-green-500 text-white text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">In Stock</span>
+    </div>
+    <div class="p-5 flex flex-col flex-1">
+    <div class="mb-2">
+    <h3 class="text-slate-900 dark:text-white text-lg font-bold group-hover:text-primary transition-colors">Soil Moisture Sensor V2</h3>
+    <p class="text-slate-500 dark:text-slate-400 text-xs mt-1">Real-time soil analysis &amp; cellular uplink</p>
+    </div>
+    <div class="flex items-center gap-1 mb-4">
+    <span class="material-symbols-outlined text-primary text-sm fill-1">star</span>
+    <span class="text-slate-900 dark:text-slate-100 text-sm font-bold">4.8</span>
+    <span class="text-slate-400 text-xs">(120 reviews)</span>
+    </div>
+    <div class="mt-auto flex items-center justify-between gap-4">
+    <span class="text-2xl font-black text-slate-900 dark:text-white">$49.99</span>
+    <button class="flex-1 bg-primary hover:bg-primary/90 text-white rounded-xl py-2.5 text-sm font-bold transition-all flex items-center justify-center gap-2">
+    <span class="material-symbols-outlined text-sm">add_shopping_cart</span>
+                                    Add
+                                </button>
+    </div>
+    </div>
+    </div>
+    <!-- Product 2 -->
+    <div class="group flex flex-col bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-2xl hover:shadow-primary/5 transition-all">
+    <div class="relative aspect-square overflow-hidden bg-slate-100 dark:bg-slate-800">
+    <div class="absolute inset-0 bg-center bg-cover transition-transform duration-500 group-hover:scale-110" data-alt="Automated smart irrigation valve system" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCmV-bLDiW05kyF_pM_-iebyJd0n-5Q4IUS2HjCcSENBgFRORJSk3riuJXIhUN_XqoYzaR2Qu68GDEh-QIiAXm1IwiKc-CctZMCBphv-gP7uCOOyShvgk3nazRf0oYElhkUbpi091HN6BueoW1SutxIn6R5TIQZewPAYOSvSdaD-iMyEVLl89hABt26dr4_ygdCACcTshhpZzwitcQ537pWTfnI52PBwgmQpLX5lrszHxk5pbM4pOoNWxzwQ1mRIZGvip3SDkmR3sU");'></div>
+    <span class="absolute top-3 left-3 bg-primary text-white text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">Hot Sale</span>
+    </div>
+    <div class="p-5 flex flex-col flex-1">
+    <div class="mb-2">
+    <h3 class="text-slate-900 dark:text-white text-lg font-bold group-hover:text-primary transition-colors">Automated Drip Kit</h3>
+    <p class="text-slate-500 dark:text-slate-400 text-xs mt-1">Full-farm automated water management</p>
+    </div>
+    <div class="flex items-center gap-1 mb-4">
+    <span class="material-symbols-outlined text-primary text-sm fill-1">star</span>
+    <span class="text-slate-900 dark:text-slate-100 text-sm font-bold">4.9</span>
+    <span class="text-slate-400 text-xs">(85 reviews)</span>
+    </div>
+    <div class="mt-auto flex items-center justify-between gap-4">
+    <span class="text-2xl font-black text-slate-900 dark:text-white">$199.00</span>
+    <button class="flex-1 bg-primary hover:bg-primary/90 text-white rounded-xl py-2.5 text-sm font-bold transition-all flex items-center justify-center gap-2">
+    <span class="material-symbols-outlined text-sm">add_shopping_cart</span>
+                                    Add
+                                </button>
+    </div>
+    </div>
+    </div>
+    <!-- Product 3 -->
+    <div class="group flex flex-col bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-2xl hover:shadow-primary/5 transition-all">
+    <div class="relative aspect-square overflow-hidden bg-slate-100 dark:bg-slate-800">
+    <div class="absolute inset-0 bg-center bg-cover transition-transform duration-500 group-hover:scale-110" data-alt="Digital farming software dashboard interface" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCctUUYTLj719uKpOYGLqiP7HeqzbRgn05yyrZfW-imDnNULFzNBjQYhVEKuQaqrIoBVjzoJWVCwGUnZG8vTtKFjzyfcPC-Xx78Phc-_IJac8F3MM7v7QyIqCpqD7hgM1D0W5GDssTe5W7iWRu-YrYTQ5ZWdQS3H5u5WpTy-mAGkr31qKhmYv_L00tGQOIcd3jY6VW0GuTz0H6m0IcgVEP7Gj-PHTQAcXmiHVG0WkM_IKs2BofYu4tisLoOWKYQ1O1_hPhu2Kg6a2Q");'></div>
+    <span class="absolute top-3 left-3 bg-blue-500 text-white text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">Subscription</span>
+    </div>
+    <div class="p-5 flex flex-col flex-1">
+    <div class="mb-2">
+    <h3 class="text-slate-900 dark:text-white text-lg font-bold group-hover:text-primary transition-colors">Crop Health Dashboard</h3>
+    <p class="text-slate-500 dark:text-slate-400 text-xs mt-1">Satellite imagery &amp; AI growth tracking</p>
+    </div>
+    <div class="flex items-center gap-1 mb-4">
+    <span class="material-symbols-outlined text-primary text-sm fill-1">star</span>
+    <span class="text-slate-900 dark:text-slate-100 text-sm font-bold">4.7</span>
+    <span class="text-slate-400 text-xs">(210 reviews)</span>
+    </div>
+    <div class="mt-auto flex items-center justify-between gap-4">
+    <span class="text-2xl font-black text-slate-900 dark:text-white">$29.00<span class="text-xs font-normal text-slate-400">/mo</span></span>
+    <button class="flex-1 bg-primary hover:bg-primary/90 text-white rounded-xl py-2.5 text-sm font-bold transition-all flex items-center justify-center gap-2">
+    <span class="material-symbols-outlined text-sm">subscriptions</span>
+                                    Subscribe
+                                </button>
+    </div>
+    </div>
+    </div>
+    <!-- Product 4 -->
+    <div class="group flex flex-col bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-2xl hover:shadow-primary/5 transition-all">
+    <div class="relative aspect-square overflow-hidden bg-slate-100 dark:bg-slate-800">
+    <div class="absolute inset-0 bg-center bg-cover transition-transform duration-500 group-hover:scale-110" data-alt="Precision agriculture weather station device" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBTEBmJ7pHACRk4LHrCLQQXBlOTH5T5StbSBe_InR1ZXo4k2mt-miiCk5MOE19DxLbq6RfSsDFismjR5TQIH-ZhE9qkKo84A_TCXsVJZ0_ZiYSfDZCBA7G_85j4LWTc84K48BaanpNsT6MZd0SDAOgW5qXZ3qhhAEt0F8qZzHn9uGdL5Gae2lBwqqMmCT2dTdbBlm46A0DfDK0qBDjwHgyLt4kxrRRMMuNRFZGa47x4lVASjXLZzaQhGDeknm1JDi2NvjxrD_mCj9I");'></div>
+    <span class="absolute top-3 right-3 bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">New</span>
+    </div>
+    <div class="p-5 flex flex-col flex-1">
+    <div class="mb-2">
+    <h3 class="text-slate-900 dark:text-white text-lg font-bold group-hover:text-primary transition-colors">Micro-Weather Station</h3>
+    <p class="text-slate-500 dark:text-slate-400 text-xs mt-1">Localized climate &amp; wind monitoring</p>
+    </div>
+    <div class="flex items-center gap-1 mb-4">
+    <span class="material-symbols-outlined text-primary text-sm fill-1">star</span>
+    <span class="text-slate-900 dark:text-slate-100 text-sm font-bold">4.5</span>
+    <span class="text-slate-400 text-xs">(42 reviews)</span>
+    </div>
+    <div class="mt-auto flex items-center justify-between gap-4">
+    <span class="text-2xl font-black text-slate-900 dark:text-white">$145.00</span>
+    <button class="flex-1 bg-primary hover:bg-primary/90 text-white rounded-xl py-2.5 text-sm font-bold transition-all flex items-center justify-center gap-2">
+    <span class="material-symbols-outlined text-sm">add_shopping_cart</span>
+                                    Add
+                                </button>
+    </div>
+    </div>
+    </div>
+    </div>
+    <!-- Promotion Section -->
+    <div class="mt-16 rounded-3xl overflow-hidden relative bg-slate-900 dark:bg-black/40 border border-slate-800">
+    <div class="absolute inset-0 opacity-40 mix-blend-overlay bg-center bg-cover" data-alt="Vibrant green farm fields at sunset" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA7A3Fzh1zvzwKW5_5pmuoeHPwNLh8NaP0ySVBG68fOrfoSDWPuyUQQRMw5TYW6QQVwkyD4ijoBJ-gCj22F6-M5ZOo4yzb-K96wvcNJPJLYEo3mjU5dtP_Us8MBOuk5j7KlMj4ToQMRZdgYKyNPOzlOb5Q3IJNdWHNLREW4l4YJ96lmP4rG8Lceu04mgtYJcl6XvhaIO4KxXSIwgywoVKLrrKuBQZu_9ZjJtdpQzIaGDX2-SY049eSUWR3YO0jm_P7uMex1c-6rjcE");'></div>
+    <div class="relative z-10 p-10 md:p-16 flex flex-col items-center text-center max-w-3xl mx-auto">
+    <span class="text-primary font-bold uppercase tracking-widest text-xs mb-4">Limited Offer</span>
+    <h2 class="text-white text-3xl md:text-4xl font-black mb-6 leading-tight">Bundle &amp; Optimize Your Entire Acreage</h2>
+    <p class="text-slate-300 text-lg mb-8">Get 15% off when you purchase a sensor starter kit along with a 12-month Dashboard subscription. Step into the future of precision farming today.</p>
+    <div class="flex flex-wrap justify-center gap-4">
+    <button class="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-xl font-bold transition-all transform hover:scale-105">Shop the Bundle</button>
+    <button class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-xl font-bold transition-all">Learn More</button>
+    </div>
+    </div>
+    </div>
+    </main>
+    <!-- Footer -->
+    <footer class="mt-auto py-12 px-10 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+    <div class="flex flex-col gap-4 col-span-1 md:col-span-1">
+    <div class="flex items-center gap-3 text-primary">
+    <span class="material-symbols-outlined">agriculture</span>
+    <h2 class="text-slate-900 dark:text-white text-lg font-bold">Netrue Limited</h2>
+    </div>
+    <p class="text-slate-500 dark:text-slate-400 text-sm">Leading the revolution in precision agriculture through affordable, high-tech digital solutions.</p>
+    </div>
+    <div>
+    <h4 class="text-slate-900 dark:text-white font-bold mb-4">Products</h4>
+    <ul class="flex flex-col gap-2 text-sm text-slate-500 dark:text-slate-400">
+    <li class="hover:text-primary cursor-pointer transition-colors">IoT Hardware</li>
+    <li class="hover:text-primary cursor-pointer transition-colors">SaaS Platforms</li>
+    <li class="hover:text-primary cursor-pointer transition-colors">Drip Kits</li>
+    <li class="hover:text-primary cursor-pointer transition-colors">Soil Analytics</li>
+    </ul>
+    </div>
+    <div>
+    <h4 class="text-slate-900 dark:text-white font-bold mb-4">Company</h4>
+    <ul class="flex flex-col gap-2 text-sm text-slate-500 dark:text-slate-400">
+    <li><a class="hover:text-primary transition-colors" href="/About-us/">Our Story</a></li>
+    <li><a class="hover:text-primary transition-colors" href="/privacy-policy.html">Privacy Policy</a></li>
+    <li><a class="hover:text-primary transition-colors" href="/terms-of-service.html">Terms of Service</a></li>
+    <li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+    </ul>
+    </div>
+    <div>
+    <h4 class="text-slate-900 dark:text-white font-bold mb-4">Newsletter</h4>
+    <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">Get the latest agri-tech updates delivered to your inbox.</p>
+    <div class="flex gap-2">
+    <input class="w-full bg-slate-100 dark:bg-slate-800 border-none rounded-lg text-sm px-3 focus:ring-1 focus:ring-primary" placeholder="Email address" type="email"/>
+    <button class="bg-primary text-white p-2 rounded-lg hover:opacity-90 transition-opacity">
+    <span class="material-symbols-outlined">send</span>
+    </button>
+    </div>
+    </div>
+    </div>
+    <div class="max-w-7xl mx-auto border-t border-slate-200 dark:border-slate-800 mt-12 pt-8 text-center text-slate-400 text-xs">
+                    © 2024 Netrue Limited. All rights reserved. Precision Farming for a Sustainable Future.
+                </div>
+    </footer>
+    </div>
+    </div>
+    </body>
+</html>

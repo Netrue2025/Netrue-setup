@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project Preview</title>
+
+<style>
+:root {
+  --bg: #0f172a;
+  --surface: #1e293b;
+  --surface-strong: #111827;
+  --text: #f8fafc;
+  --muted: #94a3b8;
+  --accent: #0ea5e9;
+  --accent-soft: rgba(14, 165, 233, 0.16);
+  --outline: rgba(148, 163, 184, 0.2);
+  --shadow: 0 20px 50px rgba(2, 8, 23, 0.34);
+  --card-shadow: 0 12px 32px rgba(2, 8, 23, 0.22);
+}
+
+body.light-mode {
+  --bg: #e2e8f0;
+  --surface: #ffffff;
+  --surface-strong: #f8fafc;
+  --text: #0f172a;
+  --muted: #475569;
+  --accent: #0284c7;
+  --accent-soft: rgba(2, 132, 199, 0.12);
+  --outline: rgba(15, 23, 42, 0.08);
+  --shadow: 0 20px 50px rgba(148, 163, 184, 0.28);
+  --card-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top, rgba(14, 165, 233, 0.12), transparent 28%),
+    linear-gradient(180deg, rgba(15, 23, 42, 0.98), var(--bg));
+  transition: background 0.35s ease, color 0.35s ease;
+}
+
+.container {
+  max-width: 1120px;
+  margin: auto;
+  padding: 24px 20px 60px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.theme-toggle {
+  border: 1px solid var(--outline);
+  background: linear-gradient(180deg, var(--surface), var(--surface-strong));
+  color: var(--text);
+  border-radius: 999px;
+  padding: 10px 14px;
+  font: inherit;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.theme-toggle:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+}
+
+.hero-card,
+.section-card {
+  background: linear-gradient(180deg, var(--surface), var(--surface-strong));
+  border: 1px solid var(--outline);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+}
+
+.hero-card {
+  overflow: hidden;
+  animation: fadeIn 0.6s ease;
+}
+
+.hero-media {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  display: block;
+  background: rgba(14, 165, 233, 0.1);
+}
+
+.hero-content {
+  padding: 28px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  border: 1px solid rgba(14, 165, 233, 0.18);
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 14px 0 12px;
+  font-size: clamp(2rem, 3vw, 2.8rem);
+}
+
+.intro {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.labels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 18px 0 0;
+}
+
+.label {
+  display: inline-flex;
+  align-items: center;
+  background: var(--accent-soft);
+  color: var(--text);
+  border: 1px solid rgba(14, 165, 233, 0.2);
+  padding: 7px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap: 22px;
+  margin-top: 26px;
+}
+
+.detail-panel {
+  background: rgba(148, 163, 184, 0.06);
+  border: 1px solid var(--outline);
+  border-radius: 18px;
+  padding: 18px;
+}
+
+.detail-panel h2,
+.section-title {
+  margin: 0 0 14px;
+  font-size: 1.05rem;
+}
+
+.about {
+  font-size: 0.96rem;
+  line-height: 1.75;
+  color: var(--text);
+}
+
+.about.collapsed {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.readmore {
+  color: var(--accent);
+  cursor: pointer;
+  margin-top: 12px;
+  display: inline-block;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.list {
+  padding-left: 18px;
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.meta {
+  display: grid;
+  gap: 14px;
+}
+
+.meta-item {
+  background: rgba(148, 163, 184, 0.06);
+  border: 1px solid var(--outline);
+  border-radius: 16px;
+  padding: 14px;
+}
+
+.meta-item strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+}
+
+.section-card {
+  margin-top: 28px;
+  padding: 22px;
+  overflow: hidden;
+}
+
+.section-copy {
+  color: var(--muted);
+  margin: 0 0 18px;
+  line-height: 1.6;
+}
+
+.rail-shell {
+  position: relative;
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+
+.rail-shell::before,
+.rail-shell::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 72px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.rail-shell::before {
+  left: 0;
+  background: linear-gradient(90deg, var(--surface), transparent);
+}
+
+.rail-shell::after {
+  right: 0;
+  background: linear-gradient(270deg, var(--surface-strong), transparent);
+}
+
+.rail-track {
+  display: flex;
+  gap: 16px;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+
+.rail-shell.reverse .rail-track {
+  animation-direction: reverse;
+  animation-duration: 32s;
+}
+
+.rail-shell:hover .rail-track,
+.rail-shell:focus-within .rail-track {
+  animation-play-state: paused;
+}
+
+.mini-card {
+  width: 230px;
+  padding: 0;
+  border: 1px solid var(--outline);
+  border-radius: 20px;
+  overflow: hidden;
+  background: linear-gradient(180deg, var(--surface), var(--surface-strong));
+  color: var(--text);
+  text-align: left;
+  cursor: pointer;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.mini-card:hover,
+.mini-card:focus-visible,
+.mini-card.active {
+  transform: translateY(-6px);
+  border-color: var(--accent);
+  box-shadow: var(--shadow);
+}
+
+.mini-card:focus-visible {
+  outline: none;
+}
+
+.mini-card img {
+  width: 100%;
+  height: 132px;
+  object-fit: cover;
+  display: block;
+}
+
+.mini-card-body {
+  padding: 14px;
+}
+
+.mini-card-title {
+  margin: 0 0 10px;
+  font-size: 0.98rem;
+}
+
+.mini-card-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 8px));
+  }
+}
+
+@media (max-width: 860px) {
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 18px 14px 44px;
+  }
+
+  .topbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .theme-toggle {
+    justify-content: center;
+  }
+
+  .hero-media {
+    height: 240px;
+  }
+
+  .hero-content,
+  .section-card {
+    padding: 18px;
+  }
+
+  .mini-card {
+    width: 200px;
+  }
+
+  .rail-shell::before,
+  .rail-shell::after {
+    width: 34px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <div class="topbar">
+    <a href="../" class="back">Back to Portfolio</a>
+
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle light and dark mode">
+      <span id="themeIcon">Sun</span>
+      <span id="themeLabel">Light Mode</span>
+    </button>
+  </div>
+
+  <section class="hero-card" id="featuredProjectCard">
+    <img id="featuredImage" class="hero-media" src="project1.PNG" alt="Project preview">
+
+    <div class="hero-content">
+      <span class="eyebrow" id="featuredCategory">Featured Project</span>
+      <h1 id="featuredTitle">Solar Power Calculator</h1>
+      <p class="intro" id="featuredSummary"></p>
+
+      <div class="labels" id="featuredLabels"></div>
+
+      <div class="details-grid">
+        <div class="detail-panel">
+          <h2>About This Project</h2>
+          <div id="aboutText" class="about collapsed"></div>
+          <span class="readmore" id="readMoreBtn">Read More</span>
+        </div>
+
+        <div class="meta">
+          <div class="meta-item">
+            <strong>Tech Stack</strong>
+            <div id="featuredStack"></div>
+          </div>
+
+          <div class="meta-item">
+            <strong>Highlights</strong>
+            <ul class="list" id="featuredHighlights"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-card">
+    <h2 class="section-title">Energy, AI and IoT Projects</h2>
+    <p class="section-copy">
+      Browse the project stream below. Selecting any card updates the large project view above so the page feels more like a modern app showcase.
+    </p>
+
+    <div class="rail-shell" id="energyRail"></div>
+  </section>
+
+  <section class="section-card">
+    <h2 class="section-title">Website Development and Software Projects</h2>
+    <p class="section-copy">
+      This section highlights product, web, and software work with the same interaction pattern, so visitors can quickly move between projects without leaving the page.
+    </p>
+
+    <div class="rail-shell reverse" id="softwareRail"></div>
+  </section>
+</div>
+
+<script>
+const body = document.body;
+const toggleButton = document.getElementById("themeToggle");
+const themeIcon = document.getElementById("themeIcon");
+const themeLabel = document.getElementById("themeLabel");
+const storedTheme = localStorage.getItem("project-theme");
+const prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+
+const featuredImage = document.getElementById("featuredImage");
+const featuredCategory = document.getElementById("featuredCategory");
+const featuredTitle = document.getElementById("featuredTitle");
+const featuredSummary = document.getElementById("featuredSummary");
+const featuredLabels = document.getElementById("featuredLabels");
+const featuredStack = document.getElementById("featuredStack");
+const featuredHighlights = document.getElementById("featuredHighlights");
+const aboutText = document.getElementById("aboutText");
+const readMoreBtn = document.getElementById("readMoreBtn");
+const energyRail = document.getElementById("energyRail");
+const softwareRail = document.getElementById("softwareRail");
+
+function svgThumb(title, subtitle, colorA, colorB) {
+  return "data:image/svg+xml;utf8," + encodeURIComponent(
+    "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'>" +
+      "<defs><linearGradient id='g' x1='0%' y1='0%' x2='100%' y2='100%'>" +
+      "<stop offset='0%' stop-color='" + colorA + "'/>" +
+      "<stop offset='100%' stop-color='" + colorB + "'/>" +
+      "</linearGradient></defs>" +
+      "<rect width='800' height='500' fill='url(#g)'/>" +
+      "<circle cx='660' cy='110' r='120' fill='rgba(255,255,255,0.14)'/>" +
+      "<circle cx='180' cy='430' r='160' fill='rgba(255,255,255,0.08)'/>" +
+      "<rect x='58' y='70' width='240' height='34' rx='17' fill='rgba(255,255,255,0.18)'/>" +
+      "<text x='58' y='212' fill='white' font-family='Segoe UI, Arial, sans-serif' font-size='52' font-weight='700'>" + title + "</text>" +
+      "<text x='58' y='264' fill='rgba(255,255,255,0.88)' font-family='Segoe UI, Arial, sans-serif' font-size='26'>" + subtitle + "</text>" +
+      "<rect x='58' y='318' width='190' height='16' rx='8' fill='rgba(255,255,255,0.42)'/>" +
+      "<rect x='58' y='352' width='280' height='16' rx='8' fill='rgba(255,255,255,0.24)'/>" +
+      "<rect x='58' y='386' width='220' height='16' rx='8' fill='rgba(255,255,255,0.18)'/>" +
+    "</svg>"
+  );
+}
+
+const projects = [
+  {
+    id: "solar-calculator",
+    group: "energy",
+    category: "Energy Planning Tool",
+    title: "Solar Power Calculator",
+    summary: "A smart planning tool that helps users estimate panel size, battery capacity, and controller requirements before a solar installation begins.",
+    image: "project1.PNG",
+    labels: ["By: Jeremiah Juba", "Collaborator: None", "Stage: Production"],
+    stack: "HTML, CSS, JavaScript, Energy Sizing Logic",
+    details: "This solar power calculator is a smart energy planning tool designed to help users determine the exact battery capacity, solar panel size, and charge controller requirements based on their energy usage. It takes into account daily load, hours of usage, battery type, system voltage, and sunlight hours to provide accurate and realistic recommendations. The system is optimized for developing regions like Nigeria and Brazil, where efficient energy planning is critical due to unstable grid supply. The application is built with a focus on simplicity, user experience, and real-world applicability, allowing even non-technical users to plan their solar installations effectively.",
+    highlights: [
+      "Calculates core solar system sizing inputs from simple user data.",
+      "Designed for real-world decision making in unstable grid environments.",
+      "Keeps the interface approachable for non-technical users."
+    ],
+    cardLabel: "Production"
+  },
+  {
+    id: "smart-incubator",
+    group: "energy",
+    category: "AI and IoT System",
+    title: "Smart Poultry Incubator",
+    summary: "An adaptive incubator concept that combines computer vision and environmental control to improve hatch success and reduce manual intervention.",
+    image: svgThumb("Smart Poultry", "AI + IoT Incubator", "#0f766e", "#0891b2"),
+    labels: ["By: Jeremiah Juba", "Collaborator: Research Stage", "Stage: Prototype"],
+    stack: "Python, Computer Vision, IoT Sensors, Environmental Control",
+    details: "This project explores a more intelligent poultry incubation workflow where camera-based embryo monitoring works alongside automated temperature and humidity control. The goal is to detect development stages in real time and adjust the environment based on the needs of each phase. It is positioned as an agricultural technology solution that can improve hatch rates, reduce waste, and support smarter farm operations.",
+    highlights: [
+      "Combines computer vision with sensor-driven automation.",
+      "Targets better hatch consistency with lower manual overhead.",
+      "Fits strongly within AgriTech and applied AI storytelling."
+    ],
+    cardLabel: "AI + IoT"
+  },
+  {
+    id: "energy-monitor",
+    group: "energy",
+    category: "Home Energy Insight",
+    title: "Smart Energy Monitoring System",
+    summary: "An IoT-first monitoring concept that tracks usage patterns and surfaces recommendations for efficiency and solar optimization.",
+    image: svgThumb("Energy Monitor", "Usage + Insight System", "#1d4ed8", "#0f172a"),
+    labels: ["By: Jeremiah Juba", "Collaborator: None", "Stage: Concept"],
+    stack: "IoT, Data Collection, Dashboard Design, Energy Analytics",
+    details: "The smart energy monitoring system is built around the idea of collecting household power data, presenting it clearly, and helping users make more efficient energy decisions. It can support load awareness, usage pattern analysis, and future solar planning. The concept bridges measurement, reporting, and optimization in one practical platform.",
+    highlights: [
+      "Makes hidden energy behavior easier to understand.",
+      "Creates a path from monitoring to solar readiness.",
+      "Can scale into a fuller dashboard or mobile companion."
+    ],
+    cardLabel: "IoT"
+  },
+  {
+    id: "portfolio-site",
+    group: "software",
+    category: "Personal Brand Platform",
+    title: "Interactive Portfolio Website",
+    summary: "A responsive portfolio experience designed to present projects, research, and professional background in a polished and accessible format.",
+    image: svgThumb("Portfolio Site", "Responsive Web Experience", "#7c3aed", "#0f172a"),
+    labels: ["By: Jeremiah Juba", "Collaborator: None", "Stage: Live Website"],
+    stack: "HTML, CSS, JavaScript, Responsive UI",
+    details: "This website project focuses on presenting a multidisciplinary profile in a clear and modern format. It balances credibility, personality, and usability by combining clean navigation, project storytelling, and downloadable profile assets. The design approach emphasizes consistency, readability, and a professional first impression.",
+    highlights: [
+      "Responsive layout optimized for desktop and mobile viewing.",
+      "Acts as a central hub for projects, publications, and contact.",
+      "Flexible enough to expand into a richer case-study experience."
+    ],
+    cardLabel: "Web"
+  },
+  {
+    id: "research-dashboard",
+    group: "software",
+    category: "Data and Workflow Tool",
+    title: "Research Tracking Dashboard",
+    summary: "A concept dashboard for organizing publications, ongoing research, milestones, and supporting notes in one clean interface.",
+    image: svgThumb("Research Hub", "Milestones + Notes", "#9333ea", "#2563eb"),
+    labels: ["By: Jeremiah Juba", "Collaborator: None", "Stage: Design Concept"],
+    stack: "JavaScript, UI Design, Data Views, Workflow Modeling",
+    details: "This software project imagines a streamlined workspace for keeping research outputs, paper ideas, and milestone progress visible in one place. It is especially useful for presenting multiple lines of work in an organized and professional way. The concept has room to grow into a practical internal tool or public-facing knowledge portal.",
+    highlights: [
+      "Structures research work into a more manageable interface.",
+      "Helps connect publications, drafts, and ongoing investigations.",
+      "Suitable for future expansion into a full productivity tool."
+    ],
+    cardLabel: "Dashboard"
+  },
+  {
+    id: "service-platform",
+    group: "software",
+    category: "Software Product Concept",
+    title: "Client Service Booking Platform",
+    summary: "A service-oriented product idea for helping clients discover offerings, submit requests, and track project delivery through a clear digital flow.",
+    image: svgThumb("Service App", "Requests + Delivery Flow", "#ea580c", "#7c2d12"),
+    labels: ["By: Jeremiah Juba", "Collaborator: None", "Stage: Product Concept"],
+    stack: "Product Design, Frontend Architecture, Service UX",
+    details: "This software concept is centered on creating a clear path from discovery to request submission to delivery updates. It can support business services, technical consulting, or specialized project work by turning manual communication into a more polished digital process. The concept emphasizes usability, trust, and operational clarity.",
+    highlights: [
+      "Translates service delivery into a modern software experience.",
+      "Improves clarity for both clients and operators.",
+      "Works well as a future website or full-stack product direction."
+    ],
+    cardLabel: "Software"
+  }
+];
+
+let activeProjectId = projects[0].id;
+
+function setTheme(theme) {
+  const isLight = theme === "light";
+  body.classList.toggle("light-mode", isLight);
+  themeIcon.textContent = isLight ? "Moon" : "Sun";
+  themeLabel.textContent = isLight ? "Dark Mode" : "Light Mode";
+  toggleButton.setAttribute("aria-pressed", String(isLight));
+  localStorage.setItem("project-theme", theme);
+}
+
+function renderLabels(items) {
+  featuredLabels.innerHTML = "";
+  items.forEach(function (item) {
+    const span = document.createElement("span");
+    span.className = "label";
+    span.textContent = item;
+    featuredLabels.appendChild(span);
+  });
+}
+
+function renderHighlights(items) {
+  featuredHighlights.innerHTML = "";
+  items.forEach(function (item) {
+    const li = document.createElement("li");
+    li.textContent = item;
+    featuredHighlights.appendChild(li);
+  });
+}
+
+function updateActiveCards() {
+  document.querySelectorAll(".mini-card").forEach(function (button) {
+    const isActive = button.dataset.projectId === activeProjectId;
+    button.classList.toggle("active", isActive);
+    button.setAttribute("aria-pressed", String(isActive));
+  });
+}
+
+function setFeaturedProject(projectId) {
+  const project = projects.find(function (item) {
+    return item.id === projectId;
+  });
+
+  if (!project) {
+    return;
+  }
+
+  activeProjectId = project.id;
+  featuredImage.src = project.image;
+  featuredImage.alt = project.title + " preview";
+  featuredCategory.textContent = project.category;
+  featuredTitle.textContent = project.title;
+  featuredSummary.textContent = project.summary;
+  featuredStack.textContent = project.stack;
+  aboutText.textContent = project.details;
+  aboutText.classList.add("collapsed");
+  readMoreBtn.textContent = "Read More";
+  renderLabels(project.labels);
+  renderHighlights(project.highlights);
+  updateActiveCards();
+}
+
+function buildMiniCard(project) {
+  const button = document.createElement("button");
+  button.className = "mini-card";
+  button.type = "button";
+  button.dataset.projectId = project.id;
+  button.setAttribute("aria-label", "Show project: " + project.title);
+
+  button.innerHTML =
+    "<img src='" + project.image + "' alt='" + project.title + " thumbnail'>" +
+    "<div class='mini-card-body'>" +
+      "<h3 class='mini-card-title'>" + project.title + "</h3>" +
+      "<span class='mini-card-tag'>" + project.cardLabel + "</span>" +
+    "</div>";
+
+  button.addEventListener("click", function () {
+    setFeaturedProject(project.id);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  return button;
+}
+
+function renderRail(container, groupName) {
+  const projectSet = projects.filter(function (project) {
+    return project.group === groupName;
+  });
+
+  const track = document.createElement("div");
+  track.className = "rail-track";
+
+  const repeated = projectSet.concat(projectSet);
+  repeated.forEach(function (project) {
+    track.appendChild(buildMiniCard(project));
+  });
+
+  container.appendChild(track);
+}
+
+setTheme(storedTheme || (prefersLight ? "light" : "dark"));
+renderRail(energyRail, "energy");
+renderRail(softwareRail, "software");
+setFeaturedProject(activeProjectId);
+
+toggleButton.addEventListener("click", function () {
+  const nextTheme = body.classList.contains("light-mode") ? "dark" : "light";
+  setTheme(nextTheme);
+});
+
+readMoreBtn.addEventListener("click", function () {
+  const isCollapsed = aboutText.classList.toggle("collapsed");
+  readMoreBtn.textContent = isCollapsed ? "Read More" : "Show Less";
+});
+</script>
+
+</body>
+</html>

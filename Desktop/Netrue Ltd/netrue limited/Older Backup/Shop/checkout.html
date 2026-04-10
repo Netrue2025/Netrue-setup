@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Checkout - Netrue Agri-Tech</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 px-6 lg:px-40 py-3 bg-white dark:bg-background-dark">
+<div class="flex items-center gap-4">
+<div class="size-8 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Netrue Agri-Tech</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<div class="hidden md:flex items-center gap-9">
+<a class="text-slate-700 dark:text-slate-300 text-sm font-medium leading-normal hover:text-primary transition-colors" href="/Shop/">Products</a>
+<a class="text-slate-700 dark:text-slate-300 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Solutions</a>
+<a class="text-slate-700 dark:text-slate-300 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Support</a>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border border-slate-200 dark:border-slate-700" data-alt="User profile avatar photo" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBl3XHXsseGDsOkC2t8pvEBnSUWGVXpxj0-BHQFL9hEesqR5XdSC_6i3gMWUG2xp8NkSQ8qsEEQ0sLpmLfpySa4p-Gp_waO_zc7Yxk1LuNHFxLjXeDLu1UF-PZjq6Almisr1N71lS0-W5ZWrqcQ2sw8bYyb2Bfn2_MV-Ov0Ilf22ChJvY3u4rPBemD7pn1rlR66kWc7HSWQ788lzrcTeyxezCN4KmXSp4P8yA2IkMLFm5hxVb8FNrFUc-zj7H7JzxgiNjWwyjorhLo");'></div>
+</div>
+</header>
+<main class="flex-1 px-6 lg:px-40 py-10">
+<div class="max-w-[1024px] mx-auto">
+<!-- Progress Indicator -->
+<div class="mb-10">
+<div class="flex justify-between mb-2">
+<span class="text-primary text-sm font-semibold">Shipping &amp; Payment</span>
+<span class="text-slate-500 text-sm">Step 2 of 4</span>
+</div>
+<div class="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 50%;"></div>
+</div>
+<div class="flex justify-between mt-3 text-[10px] uppercase tracking-widest font-bold text-slate-400">
+<span class="text-primary">Cart</span>
+<span class="text-primary">Shipping</span>
+<span>Payment</span>
+<span>Confirm</span>
+</div>
+</div>
+<h1 class="text-3xl font-bold mb-8 text-slate-900 dark:text-white">Checkout</h1>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+<!-- Main Form Section -->
+<div class="lg:col-span-7 flex flex-col gap-8">
+<!-- Shipping Address -->
+<section class="bg-white dark:bg-slate-900/50 p-6 rounded-xl border border-slate-200 dark:border-slate-800">
+<h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">local_shipping</span>
+                                    Shipping Information
+                                </h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="md:col-span-2">
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Full Name</label>
+<input class="w-full bg-background-light dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg px-4 py-2 focus:ring-primary focus:border-primary" placeholder="John Doe" type="text"/>
+</div>
+<div class="md:col-span-2">
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Street Address</label>
+<input class="w-full bg-background-light dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg px-4 py-2 focus:ring-primary focus:border-primary" placeholder="123 Farm Road" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">City</label>
+<input class="w-full bg-background-light dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg px-4 py-2 focus:ring-primary focus:border-primary" placeholder="Des Moines" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Zip Code</label>
+<input class="w-full bg-background-light dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg px-4 py-2 focus:ring-primary focus:border-primary" placeholder="50301" type="text"/>
+</div>
+</div>
+</section>
+<!-- Payment Method -->
+<section class="bg-white dark:bg-slate-900/50 p-6 rounded-xl border border-slate-200 dark:border-slate-800">
+<h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">payments</span>
+                                    Payment Method
+                                </h3>
+<div class="space-y-4">
+<label class="flex items-center p-4 border-2 border-primary bg-primary/5 rounded-xl cursor-pointer">
+<input checked="" class="text-primary focus:ring-primary" name="payment" type="radio"/>
+<div class="ml-4 flex items-center justify-between w-full">
+<span class="font-medium">Credit Card</span>
+<div class="flex gap-2">
+<span class="material-symbols-outlined text-slate-400">credit_card</span>
+</div>
+</div>
+</label>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2 px-2">
+<div class="md:col-span-2">
+<label class="block text-xs font-semibold text-slate-500 uppercase mb-1">Card Number</label>
+<input class="w-full bg-background-light dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg px-4 py-2" placeholder="0000 0000 0000 0000" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-semibold text-slate-500 uppercase mb-1">Expiry Date</label>
+<input class="w-full bg-background-light dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg px-4 py-2" placeholder="MM/YY" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-semibold text-slate-500 uppercase mb-1">CVV</label>
+<input class="w-full bg-background-light dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg px-4 py-2" placeholder="123" type="text"/>
+</div>
+</div>
+<label class="flex items-center p-4 border border-slate-200 dark:border-slate-700 rounded-xl cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-800">
+<input class="text-primary focus:ring-primary" name="payment" type="radio"/>
+<div class="ml-4 flex items-center justify-between w-full">
+<span class="font-medium">PayPal</span>
+<span class="material-symbols-outlined text-slate-400">account_balance_wallet</span>
+</div>
+</label>
+</div>
+</section>
+<a href="/Shop/confirmation.html">
+    <button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl transition-all shadow-lg shadow-primary/20 flex items-center justify-center gap-2">
+                                Review Order
+                                <span class="material-symbols-outlined">arrow_forward</span>
+    </button>
+</a>
+
+</div>
+<!-- Order Summary Sidebar -->
+<aside class="lg:col-span-5">
+<div class="bg-white dark:bg-slate-900/50 p-6 rounded-xl border border-slate-200 dark:border-slate-800 sticky top-10">
+<h3 class="text-xl font-bold mb-6">Order Summary</h3>
+<div class="space-y-4 mb-8">
+<!-- Item 1 -->
+<div class="flex items-center gap-4">
+<div class="size-20 bg-center bg-cover rounded-lg border border-slate-100 dark:border-slate-700 shrink-0" data-alt="High tech soil moisture sensor probe" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCekm6uMJhjzVrmtW6AAWhiebv4jIA79mDUrWPCn8ehEq0FxU_UqW1KnKmQQhbBqxrG-_nQpUI63fKC0RhmOabIPHa90dRInYhVEUg0v_L0rc6PyCKEDU-s4BSqMtIeXLR3pYnThkUpBCuXbWaMZhQO9qqVtywwEtGUhEmyTE-zEYsf6grQ5BjmGzz0E44xstZ-CEkPCVVTv1Gf5Iy8rhvhuazuQ1IJPfnIiiopVuh5WEpXLSxvgS7-fybH-K51urD6cjBEePVTbXg')"></div>
+<div class="flex-1">
+<p class="font-semibold text-slate-900 dark:text-white">Soil Moisture Sensor V2</p>
+<p class="text-sm text-slate-500">Qty: 1</p>
+</div>
+<p class="font-semibold text-slate-900 dark:text-white">$45.00</p>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center gap-4">
+<div class="size-20 bg-center bg-cover rounded-lg border border-slate-100 dark:border-slate-700 shrink-0" data-alt="Automated drip irrigation system components" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBOTL8qyQ07iGbV7RlrNMHmLG8mbB3b6dMSZqOMQkHRl7fDHKfs2c643Hcf_6_h0Vg2uevX4j57DZR3IDdjW8Z6-IY-57hAlqvFWHlB9xj7DWk8w5cO5Boasi00uflMZe7ntbeq_8dRahe-jjm2lid5wiIGIsoolV0OSUcrViZyV9CuMUR7P88NQ1sigdJi9-cMeYVc2VGGU7ZV0LIv9C3n5DNgy5It4ZrGd68i1HTLCsWiWLrbrU5z4cYQj2kqnRR5Ahfhr05NIh8')"></div>
+<div class="flex-1">
+<p class="font-semibold text-slate-900 dark:text-white">Automated Drip Kit</p>
+<p class="text-sm text-slate-500">Qty: 1</p>
+</div>
+<p class="font-semibold text-slate-900 dark:text-white">$129.00</p>
+</div>
+</div>
+<div class="border-t border-slate-200 dark:border-slate-800 pt-6 space-y-3">
+<div class="flex justify-between text-slate-600 dark:text-slate-400">
+<span>Subtotal</span>
+<span>$174.00</span>
+</div>
+<div class="flex justify-between text-slate-600 dark:text-slate-400">
+<span>Shipping</span>
+<span class="text-green-600 dark:text-green-400 font-medium">Free</span>
+</div>
+<div class="flex justify-between text-slate-600 dark:text-slate-400">
+<span>Tax</span>
+<span>$13.92</span>
+</div>
+<div class="flex justify-between text-lg font-bold text-slate-900 dark:text-white pt-3 border-t border-dashed border-slate-200 dark:border-slate-800">
+<span>Total</span>
+<span class="text-primary">$187.92</span>
+</div>
+</div>
+<div class="mt-8 bg-primary/5 p-4 rounded-lg flex gap-3">
+<span class="material-symbols-outlined text-primary">verified_user</span>
+<div>
+<p class="text-xs font-bold text-primary uppercase">Netrue Secure Checkout</p>
+<p class="text-[11px] text-slate-500">Your data is encrypted with AES-256 bank-level security.</p>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</div>
+</main>
+<!-- Simple Footer -->
+<footer class="px-6 lg:px-40 py-8 text-center text-slate-400 text-sm">
+<p>© 2024 Netrue Agri-Tech Systems Inc. All rights reserved.</p>
+<div class="flex justify-center gap-4 mt-2">
+<a class="hover:underline" href="/privacy-policy.html">Privacy Policy</a>
+<a class="hover:underline" href="/terms-of-service.html">Terms of Service</a>
+</div>
+</footer>
+</div>
+</div>
+</body></html>
